@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{width: 100%;height: 100%;}
+			.top{
+				position: relative;
+				height: 96px;
+				background: linear-gradient(to right,#3388FF,#fff);
+			}
+			h1{
+				height: 64px;
+				line-height: 64px;
+				position: relative;
+				/*margin: 10px 0 0 30px;*/
+			}
+			.box{
+				position: relative;
+				float: right;
+				top: -60px;
+			}
+			
+			ul{
+			   list-style: none;
+			}
+			li{
+				position: relative;
+				float: left;
+				width: 64px;
+				height: 80px;
+				/*background: pink;*/
+				margin: 0 30px;
+				cursor: pointer;
+			}
+			li>img{
+				width: 64px;
+				height: 64px;
+			}
+			
+			.nav{
+				position: absolute;
+				width: calc(100% - 300px);
+				height: 60px;
+				border: solid 1px #808080;
+				right: 0px;
+				border-top: none;
+				overflow: hidden;
+			}
+			.nav h4{position: relative;float: left;margin-left: 30px;line-height: 60px;}
+			.box-nav{position: absolute;
+			         margin-top: 20px;
+			         animation: kaishi 8s  1s backwards;
+			         animation-iteration-count:infinite;
+			         }
+			.box-nav a{
+				display: block;
+				padding-left: 120px;
+				font-size: 16px;
+			}
+			.box-nav a:nth-child(n+2){padding-top: 50px;}
+			.box-nav:hover{
+				animation-play-state:paused;
+				color: red;
+			}
+			.box-nav:hover a{
+				text-decoration: underline;
+				cursor: pointer;
+			}
+			@keyframes kaishi{
+				0%{top: 0px;}
+				15%{top: -70px;}
+				30%{top: -70px;}
+				45%{top: -140px;}
+				60%{top: -140px;}
+				75%{top:-213px}
+			}
+			
+			.bdone{
+				width: 290px;
+				height: calc(100%-97px);
+				position: relative;
+				background: #3388FF;
+				text-align: center;
+				border: solid 8px #CCCCCC;
+			}
+			.bdone img{
+				width: 250px;
+				height: 250px;
+				margin-top: 10px;
+			}
+			.bdone input{
+				height: 25px;
+				margin: 15px 0;
+			}
+			#btn{
+				width: 200px;
+				height: 40px;
+				position: relative;
+				display: block;
+				margin: 40px auto;
+				font-size: 20px;
+				box-shadow: 10px 10px 5px #666666;
+				cursor: pointer;
+			}
+			
+			.di{
+				width: calc(100% - 326px);
+				height: calc(100% - 178px);
+				background: #CCCCCC;
+				position: absolute;
+				left: 316px;
+				top: 165px;
+				border-radius: 25px;
+			}
+			.bdtwo{
+				width: calc(100% - 100px);
+				height: calc(100% - 100px);
+				position: relative;
+				margin: 40px 40px;
+				box-shadow: 0px 0px 15px 8px #666666;
+				overflow: auto;
+			}
+			.bdtwo input{
+				height: 25px;
+				margin: 15px 15px;
+			}
+			.bdtwo table{
+				position: relative;
+				margin: 15px auto;
+			}
+			#change{
+				position: absolute;
+				width: 100px;
+				height: 30px;
+				right: 50px;
+				bottom: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<h1>XX公司办公OA系统，欢迎！</h1>
+			<div class="box">
+				<ul>
+					<li>
+						<img src="img/home.jpg" />
+						<div class="btn1">
+						   <a>返回首页</a>
+						</div>
+					</li>
+					<li>
+						<img src="img/person.jpg" />
+						<div class="btn1">
+						   <a>修改信息</a>
+						</div>
+					</li>
+					<li>
+						<img src="img/exit.jpg" />
+						<div class="btn1">
+						   <a>退出系统</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="nav">
+			<h4>最新通知：</h4>
+			<div class="box-nav">
+				<a>阿富汗空间阿斯达符合啊</a>
+				<a>是激发了我了请假了开始进阿飞</a>
+				<a>啊放假了文件分类考试将豆腐</a>
+				<a>阿富汗空间阿斯达符合啊</a>
+			</div>
+		</div>
+		
+		<div class="bdone">
+			<img src="#" />
+			<table>
+				<tr>
+					<td>管理员名称：</td>
+					<td><input type="text" name=""  value="" disabled="disabled"/></td>
+				</tr>
+				<tr>
+					<td>管理员编号：</td>
+					<td><input type="text" name=""  value="" disabled="disabled"/></td>
+				</tr>
+			</table>
+			<input type="button" name="" id="btn" value="客户信息查询系统" />
+			<input type="button" name="" id="btn" value="客户管理系统" />
+			<input type="button" name="" id="btn" value="客户监管系统" />
+		</div>
+		
+		<div class="di">
+			<div class="bdtwo">
+				<table >
+					<tr>
+						<td>编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;号</td>
+						<td><input type="text" name=""  value="" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</td>
+						<td><input type="text" name="xingming"  value="" disabled="disabled"/></td>
+					</tr>
+					<tr>
+						<td>密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</td>
+						<td><input type="text" name=""  value="" /></td>
+					</tr>
+					<tr>
+						<td>权限等级</td>
+						<td>
+						<input type="radio" name="lv"  value="1"  checked="checked"/>1
+						<input type="radio" name="lv"  value="2" />2
+						<input type="radio" name="lv"  value="3" />3</td>
+					</tr>
+					<tr>
+						<td>性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+						<td>
+						<input type="radio" name="gender"  value="man"  checked="checked"/>男
+						<input type="radio" name="gender"  value="woman" />女</td>
+		
+					</tr>
+					<tr>
+						<td>联系方式</td>
+						<td><input type="text" name=""  value="" /></td>
+					</tr>
+				</table>
+				<a><input id="change" type="button" value="修改"/></a>
+			</div>
+		</div>
+	</body>
+</html>
