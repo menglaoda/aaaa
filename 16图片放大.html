@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 300px;
+				height: 300px;
+				border: solid 1px black;
+				position: relative;
+				margin: 100px;
+				overflow: hidden;
+			}
+			#box img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 300px;
+				height: 300px;
+				transition: all 1s;
+			}
+			#box:hover img{
+				width: 350px;
+				height: 350px;
+				top: -25px;
+				left: -25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="baidu/img/ia_100000008.png" />
+		</div>
+	</body>
+</html>
