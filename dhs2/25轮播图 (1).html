@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0px;			
+			}
+			#box{
+				width: 400px;
+				height: 450px;
+				border: solid 1px black;
+				margin: 50px auto;
+				position: relative;
+			}
+			#box img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				opacity: 0;
+				transition: all 1s;
+			}
+			#box img:first-child{
+				opacity: 1;
+			}
+			.left{
+				width: 30px;
+				height: 50px;
+				background: #666;
+				color: white;
+				position: absolute;
+				left: 0px;
+				top: 200px;
+				font-size: 30px;
+				text-align: center;
+				line-height: 50px;
+			}
+			.right{
+				width: 30px;
+				height: 50px;
+				background: #666;
+				color: white;
+				position: absolute;
+				right: 0px;
+				top: 200px;
+				font-size: 30px;
+				text-align: center;
+				line-height: 50px;
+			}
+			#list{
+				list-style: none;
+				width: 100%;
+				position: absolute;
+				bottom: 20px;
+				text-align: center;
+			}
+			#list li{
+				width: 10px;
+				height: 10px;
+				border: solid 2px #999;
+				background: #ccc;
+				border-radius: 50%;
+				display: inline-block;
+			}
+			#list li:first-child{
+				background: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<img src="img/ia_100000006.jpg" />
+			<img src="img/ia_100000007.jpg" />
+			<img src="img/ia_100000008.jpg" />
+			<div class="left"><</div>
+			<div class="right">></div>
+			<ul id="list">
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var oimg = document.querySelectorAll("img");
+		var oli = document.querySelectorAll("li");
+		var box = document.querySelector("#box");
+		var left = document.querySelector(".left");
+		var right = document.querySelector(".right");
+		var i = 0 ;
+		var timer = setInterval(fn,3000);
+		function fn(){
+			i++;
+			if(i==oimg.length){
+				i=0;
+			}
+			for(var j=0;j<oimg.length;j++){
+				oimg[j].style.opacity = 0;
+			}
+			icon();
+			oimg[i].style.opacity = 1;
+		}
+		function icon(){
+			for(var j=0;j<oimg.length;j++){
+				oli[j].style.background = "#ccc";				
+			}
+			oli[i].style.background = "white";
+		}
+		
+		//鼠标移入，
+		box.onmouseover = function(){
+			clearInterval(timer);
+		}
+		//鼠标移出
+		box.onmouseout = function(){
+			timer = setInterval(fn,3000);
+		}
+		//浏览器失去焦点
+		window.onblur = function(){
+			clearInterval(timer);
+		}
+		//浏览器获得焦点
+		window.onfocus = function(){
+			timer = setInterval(fn,3000);
+		}
+		
+		//下一张
+		right.onclick = function(){
+			fn();
+		}
+		//上一张
+		left.onclick = function(){
+			i--;
+			if(i<0){
+				i=oimg.length-1;
+			}
+			for(var j=0;j<oimg.length;j++){
+				oimg[j].style.opacity = 0;
+			}
+			icon();
+			oimg[i].style.opacity = 1;
+		}
+		
+		//小圆圈
+		for(var k=0;k<oli.length;k++){
+			oli[k].index = k ;
+			oli[k].onclick = function(){
+				i=this.index;
+				for(var j=0;j<oimg.length;j++){
+					oimg[j].style.opacity = 0;
+				}
+				icon();
+				oimg[i].style.opacity = 1;
+			}
+		}
+	</script>
+</html>
