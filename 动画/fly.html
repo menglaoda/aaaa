@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			#aaaa{
+				width: 150px;
+				height: 100px;
+				left: 0px;
+				/*border: solid 1px;*/
+				position: absolute;
+				animation: bbfly 6s linear  forwards;
+			}
+			
+			#box {
+				width: 141px;
+				height: 85px;
+				/*border: solid 1px;*/
+				background: url(img/ia_100000000.png);
+				position: absolute;
+				animation: myfly 0.5s 8 forwards;
+			}
+			@keyframes bbfly{
+				from{left: 0px;}
+				to{left: 1000px;}
+			}
+			
+			@keyframes myfly{
+				
+				0%{background: url(img/ia_100000000.png);}
+				14.3%{background: url(img/ia_100000000019.png);}
+				28.6%{background: url(img/ia_100000000020.png);}
+				42.9%{background: url(img/ia_100000000022.png);}
+				57.2%{background: url(img/ia_100000000023.png);}
+				71.5%{background: url(img/ia_100000000027.png);}
+				85.8%{background: url(img/ia_100000000028.png);}
+				100%{background: url(img/ia_100000000029.png);}
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="aaaa">
+			
+			<div id="box">
+			
+			</div>
+		</div>
+	</body>
+</html>
