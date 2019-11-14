@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Document</title>
+</head>
+<body>
+
+      <script type="text/javascript">
+      	// 1.计算2的n次方幂，n可输入，n为自然数；
+      	// var n = parseInt(window.prompt('input'));
+      	// if (n >= 1) {
+      	// 	var s = 2;
+      	// 	var i = n - 1;
+      	// for( ; i--; ){
+      	// 	s *=2;
+      	//   }
+      	// }else{
+      	// 	s = 1;
+       //  }
+       //  document.write(s);
+
+       // 2.计算n的阶乘，n可输入；
+       // var n = parseInt(window.prompt('input'));
+       // if (n >= 1) {
+       // 	var s = n;
+      	// var i = n - 1;
+      	// for( ; i--; ){
+      	// 	s *= n-1;
+      	// 	n--;
+      	//   }
+      	// }else{
+      	// 	s = 1;
+       //  }
+       //  document.write(s);
+
+       // 3.著名的斐波那契额数列 1 1 2 3 5 8 输出定n项
+       // var n = parseInt(window.prompt('input'));
+       // var c = 1;
+       // var s = 1;
+       // if(n % 2){
+       // 	n = (n - 1) / 2;
+       // 	for(i = 0; i < n; i++){
+       // 	c += s;
+       //  s += c;
+       //     }
+       // document.write(c);
+       // // document.write(s);
+       // } else{
+       // 	n = (n - 2) / 2;
+       // 	for(i = 0; i < n; i++){
+       // 	c += s;
+       //  s += c;
+       //     }
+       // // document.write(c);
+       // document.write(s);
+       // } 
+
+       // 4.编写一个程序，输入一个三位数的正整数，输出时反向输出。
+       //    如：输入456，输出654；
+       // var n = parseInt(window.prompt('input'));
+       // var a;
+       // var b;
+       // var c;
+       // var d;
+       // a = n % 100;
+       // b = (n - a) / 100;
+       // c = a % 10;
+       // d = (a - c) / 10;
+       // // c = a / 10;
+       // document.write(c);
+       // document.write(d);
+       // document.write(b);
+
+       // 5.输入a，b，c三个数，打印出最大的数；
+       // var a = parseInt(window.prompt('请输入a'));
+       // var b = parseInt(window.prompt('请输入b'));
+       // var c = parseInt(window.prompt('请输入c'));
+       // if(a >= b && a >=c){
+       // 	document.write(a);
+       // }else if(b >= a && b >= c)
+       // {
+       // 	document.write(b);
+       // }else if(c >= a && c >= b)
+       // {
+       // 	document.write(c);
+       // }
+
+       // 6.打印出100以内的质数
+       for(var i = 1; i < 100; i++){
+       	var a = i;
+       	for(var s = a - 1; s > 1; s--){
+       	if(a % s == 0){
+       		document.write(a + " ");
+       	}
+       		else{
+       		// document.write(a + " ");
+       	 }
+        }
+       }
+
+      </script>
+
+</body>
+</html>
